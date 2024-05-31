@@ -1,0 +1,148 @@
+{%load static %}
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trainers</title>
+    <link rel="stylesheet" href="{% static 'css/TrainersFinal.css' %}">
+</head>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+<body>
+
+    
+    <div class="nave">
+        <nav class="navbar navbar-expand-lg navbar-dark">
+            <div class="container">
+                <div class="logo-container">
+                    <img class="logo1" src="{% static 'images/WhatsApp Image 2024-04-12 at 22.49.55.jpeg' %}" height="100px" width="100px">
+                </div>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="{% url 'Home' %}">Home</a>
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      About Us
+                    </a>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="{% url 'about' %}">Our Events</a></li>
+                      <li><a class="dropdown-item" href="{% url 'bmi' %}">BMI Calculator</a></li>
+                      <li><a class="dropdown-item" href="{% url 'Diet1' %}">Diet Plan</a></li>
+                    </ul>
+                  </li>
+      
+                  <li class="nav-item">
+                    <a class="nav-link active" href="{% url 'FG' %}">Gallery</a>
+                  </li>
+                  
+                  <li class="nav-item">
+                    <a class="nav-link active" href="{% url 'TF' %}">Trainers</a>
+                  </li>
+                </ul>
+                <button type="button" class="btn btn-primary"><a href="{% url 'price' %}">Become a Member</a></button>
+              </div>
+            </div>
+            
+          </nav>
+    
+    
+          <div class="head5">
+            <h1>Trainers</h1>
+        </div>
+    
+    </div>
+
+    <div class="video-container1">
+        <video autoplay loop muted id="video-bg1">
+  
+          <source src="{% static 'images/TrainersVideo1.mp4' %}" type="video/mp4" width="100px">
+  
+        </video>
+      </div>
+
+      <div class="mtext">
+        <p style="color: red;" class="gtext">OUR TEAM MEMBERS</p>
+
+       <div class="ptext">
+            
+           OUR MOST EXPRIENCED<br> TRAINERS
+            
+        </div>
+    </div>
+
+
+
+
+         
+  <section id="trainersinfo">
+    <div class="wrapper">
+        <div class="card">
+            <img class="profile" src="{% static 'images/img13.jpg' %}" alt="">
+            <div class="info">
+                <h1>Rohit</h1>
+                <ul>
+                    <li><a href="https://www.facebook.com/executfitness/" ><img class="hov" src="{% static 'images/fb.jpg' %}" width="30px" height="30px"></a></li>
+                    <li><a href="https://www.instagram.com/execute_fitness_?igsh=MW55MjR3aWZidG94ag%3D%3D" ><img class="hov" src="{% static 'images/ins.jpg' %}" width="30px" height="30px"></a></li>
+                </ul>
+            </div>
+        </div>
+    
+        <div class="card">
+            <img class="profile" src="{% static 'images/Mayur Sonawane.jpeg' %}" alt="">
+            <div class="info">
+                <h1>Mayur</h1>
+                <ul>
+                  <li><a href="https://www.facebook.com/executfitness/" ><img class="hov" src="{% static 'images/fb.jpg' %}" width="30px" height="30px"></a></li>
+                  <li><a href="https://www.instagram.com/execute_fitness_?igsh=MW55MjR3aWZidG94ag%3D%3D" ><img class="hov" src="{% static 'images/ins.jpg' %}" width="30px" height="30px"></a></li>
+                </ul>
+            </div>
+        </div>
+    
+        <div class="card">
+            <img class="profile" src="{% static 'images/WhatsApp Image 2024-04-13 at 13.30.35.jpeg' %}" alt="">
+            <div class="info">
+                <h1>Rishabh</h1>
+                <ul>
+                  <li><a href="https://www.facebook.com/executfitness/" ><img class="hov" src="{% static 'images/fb.jpg' %}" width="30px" height="30px"></a></li>
+                  <li><a href="https://www.instagram.com/execute_fitness_?igsh=MW55MjR3aWZidG94ag%3D%3D" ><img class="hov" src="{% static 'images/ins.jpg' %}" width="30px" height="30px"></a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+ </section>
+
+
+ 
+ <footer class="footer">
+    <div class="footer-section">
+      <h2>COMPANY</h2>
+      <ul>
+        <li><a href="{% url 'Home' %}">Home</a></li>
+        <li><a href="{% url 'about' %}">About us</a></li>
+        <li><a href="{% url 'FG' %}">Gallery</a></li>
+        <li><a href="{% url 'TF' %}">Trainers</a></li>
+        
+      </ul>
+    </div>
+    <div class="footer-section">
+      <h2>OPEN HOURS</h2>
+      <p><strong>Monday - Saturday (Morning)</strong><br/>6am - 11am</p>
+      <p><strong>Monday - Saturday (Evening)</strong><br/>4pm - 10pm</p>
+      <p><strong>Sunday</strong><br/>Closed</p>
+    </div>
+    <div class="footer-section">
+      <h2>About Execute Fitness Gym</h2>
+      <p>At Execute Fitness Gym, we're dedicated to transforming lives through dynamic workouts, cutting-edge equipment, and a motivating community.</p>
+    </div>
+  </footer>
+</body>
+</html>  

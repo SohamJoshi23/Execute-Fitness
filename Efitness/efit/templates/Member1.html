@@ -1,0 +1,55 @@
+{% load static %}
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gym Membership Form</title>
+     <link rel="stylesheet" href="{% static 'css/Member1.css' %}"> 
+     <script src="{% static 'css/member.js' %}"></script>
+    
+</head>
+<body>
+    <img class="bg-img" src="{% static 'images/GettyImages-1213615970.jpg' %}" alt="bg image">
+    <div class="container">
+        
+        <!-- <form id="membershipForm" class="form"> -->
+            <form id="membershipForm" class="form" method="post">
+            {% csrf_token %}
+            
+            <h2>Gym Membership Form</h2>
+            <div class="form-group">
+                <label for="fullName">Full Name:</label>
+                <input type="text" id="fullName" name="full_name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="phoneNumber">Phone Number:</label>
+                <input type="tel" id="phoneNumber" name="phone_number" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="Format: 123-456-7890" required>
+            </div>
+            <div class="form-group">
+                <label for="membershipType">Membership Type:</label>
+                <select id="membershipType" name="membership_type" required>
+                    <option value="" disabled selected>Select Membership Type</option>
+                    <option value="basic">Basic</option>
+                    <option value="premium">Premium</option>
+                    <option value="ultimate">Ultimate</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <button type="submit" onclick="ty()">Submit</button>
+            </div>
+        </form>
+    </div>
+
+    <!-- <script src="script.js"></script> -->
+
+
+    
+</body>
+</html>

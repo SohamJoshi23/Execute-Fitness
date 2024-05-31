@@ -1,0 +1,72 @@
+{%load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pricing</title>
+    <link rel="stylesheet" href="{% static 'css/pricing.css' %}">
+</head>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+<body>
+    <main>
+        <div class="row row-cols-1 row-cols-md-3 mb-3 text-center">
+          <div class="col">
+            <div class="card mb-4 rounded-3 shadow-sm border-dark">
+              <div class="card-header py-3 text-bg-primary border-dark">
+                <h4 class="my-0 fw-normal">Basic</h4>
+              </div>
+              <div class="card-body">
+                <h1 class="card-title pricing-card-title">2500<small class="text-body-secondary fw-light">/mo</small></h1>
+                <ul class="list-unstyled mt-3 mb-4">
+                  <li>Access to cardio equipment</li>
+                  <li>Free weight machines for strength training</li>
+                  <li>Locker rooms and showers</li>
+                  <li>Group fitness classes (depending on the gym)</li>
+                </ul>
+                <button type="button" class="w-100 btn btn-lg btn-outline-dark"><a href="{% url 'Membership' %}">Become a Member</a></button>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card mb-4 rounded-3 shadow-sm border-dark">
+              <div class="card-header py-3 text-bg-primary border-dark">
+                <h4 class="my-0 fw-normal">Premium</h4>
+              </div>
+              <div class="card-body">
+                <h1 class="card-title pricing-card-title">9500<small class="text-body-secondary fw-light">/6 months</small></h1>
+                <ul class="list-unstyled mt-3 mb-4">
+                  <li>Access to additional amenities (sauna, steam room)</li>
+                  <li>Personal training sessions (limited or discounted)</li>
+                  <li>Enhanced group fitness classes</li>
+                  <li>Towel service</li>
+                </ul>
+                <button type="button" class="w-100 btn btn-lg btn-outline-dark"><a href="{% url 'Membership' %}">Become a Member</a></button>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card mb-4 rounded-3 shadow-sm border-dark">
+              <div class="card-header py-3 text-bg-primary border-dark">
+                <h4 class="my-0 fw-normal">Ultimate</h4>
+              </div>
+              <div class="card-body">
+                <h1 class="card-title pricing-card-title">18000<small class="text-body-secondary fw-light">/yr</small></h1>
+                <ul class="list-unstyled mt-3 mb-4">
+                  <li>Unlimited access to all facilities and amenities</li>
+                  <li>Priority booking for personal training sessions</li>
+                  <li>Exclusive access to member-only events</li>
+                  <li>Discounts on additional services (massage therapy)</li>
+                </ul>
+                <button type="button" class="w-100 btn btn-lg btn-outline-dark"><a href="{% url 'Membership' %}">Become a Member</a></button>
+              </div>
+            </div>
+          </div>
+        </div>
+    
+        
+      </main>
+</body>
+</html>
